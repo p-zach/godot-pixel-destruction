@@ -1,0 +1,14 @@
+[remap]
+
+importer="image"
+type="Image"
+uid="uid://d2vg1k8y8nklg"
+path="res://.godot/imported/Terrain.png-6e7bc7903f73e52b5ce947552537fc7a.image"
+
+[deps]
+
+source_file="res://assets/Terrain.png"
+dest_files=["res://.godot/imported/Terrain.png-6e7bc7903f73e52b5ce947552537fc7a.image"]
+
+[params]
+

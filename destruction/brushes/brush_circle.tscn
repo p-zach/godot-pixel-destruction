@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://47xmyfu36dok"]
+
+[ext_resource type="Script" path="res://destruction/brushes/brush_circle.gd" id="1_f0bua"]
+[ext_resource type="Texture2D" uid="uid://cjnlmsar2io5u" path="res://assets/BrushCircle.png" id="2_rf671"]
+
+[node name="BrushCircle" type="Node2D"]
+script = ExtResource("1_f0bua")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_rf671")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(1, 0, 0, 0.345098)
+polygon = PackedVector2Array(1, 65, 46, 45, 66, 0, 47, -46, -1, -65, -49, -42, -65, 0, -47, 45)

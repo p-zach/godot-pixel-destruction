@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c38h2bw5jsmf0"]
+
+[ext_resource type="Script" path="res://destruction/brushes/brush_diamond.gd" id="1_7x0vu"]
+[ext_resource type="Texture2D" uid="uid://b1em5m1nsausy" path="res://assets/BrushDiamond.png" id="2_tpx34"]
+
+[node name="BrushDiamond" type="Node2D"]
+script = ExtResource("1_7x0vu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_tpx34")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(1, 0, 0, 0.345098)
+polygon = PackedVector2Array(0, 64, 64, 0, 0, -65, -65, 0)

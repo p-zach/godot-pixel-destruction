@@ -1,0 +1,22 @@
+[gd_scene load_steps=9 format=3 uid="uid://bfmqeioe3ay4s"]
+
+[ext_resource type="Script" path="res://destruction/destructible_terrain.gd" id="1_14rcs"]
+[ext_resource type="Script" path="res://demo.gd" id="1_j38ws"]
+[ext_resource type="PackedScene" uid="uid://47xmyfu36dok" path="res://destruction/brushes/brush_circle.tscn" id="2_7y1vg"]
+[ext_resource type="PackedScene" uid="uid://vywthqgwr8hx" path="res://ball.tscn" id="2_doysq"]
+[ext_resource type="Image" uid="uid://d2vg1k8y8nklg" path="res://assets/Terrain.png" id="2_i7fgc"]
+[ext_resource type="PackedScene" uid="uid://pxw24gktqudv" path="res://destruction/scenes/destructible_texture.tscn" id="2_r0if5"]
+[ext_resource type="PackedScene" uid="uid://dfsjgvlpmoae7" path="res://destruction/brushes/brush_star.tscn" id="3_edxh5"]
+[ext_resource type="PackedScene" uid="uid://c38h2bw5jsmf0" path="res://destruction/brushes/brush_diamond.tscn" id="4_o62qo"]
+
+[node name="Demo" type="Node2D"]
+script = ExtResource("1_j38ws")
+ball = ExtResource("2_doysq")
+brush1 = ExtResource("2_7y1vg")
+brush2 = ExtResource("3_edxh5")
+brush3 = ExtResource("4_o62qo")
+
+[node name="DestructibleTerrain" type="Node2D" parent="."]
+script = ExtResource("1_14rcs")
+terrain_image = ExtResource("2_i7fgc")
+destructible_texture = ExtResource("2_r0if5")

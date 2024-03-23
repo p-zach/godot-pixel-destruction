@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfsjgvlpmoae7"]
+
+[ext_resource type="Script" path="res://destruction/brushes/brush_star.gd" id="1_mw4nh"]
+[ext_resource type="Texture2D" uid="uid://uswl45gi73u5" path="res://assets/BrushStar.png" id="2_56hxo"]
+
+[node name="BrushStar" type="Node2D"]
+script = ExtResource("1_mw4nh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_56hxo")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(1, 0, 0, 0.345098)
+polygon = PackedVector2Array(0, 32, 39, 58, 27, 12, 65, -18, 18, -21, 18, -21, 0, -65, -17, -22, -64, -18, -29, 11, -41, 57)

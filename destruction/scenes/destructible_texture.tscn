@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://pxw24gktqudv"]
+
+[ext_resource type="Script" path="res://destruction/destructible_texture.gd" id="1_e7gke"]
+[ext_resource type="PackedScene" uid="uid://h0xjobxyqhdf" path="res://destruction/scenes/destructible.tscn" id="2_q022b"]
+
+[node name="DestructibleTexture" type="Node2D" node_paths=PackedStringArray("destructible", "sprite")]
+script = ExtResource("1_e7gke")
+destructible = NodePath("Sprite2D/Destructible")
+sprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+centered = false
+
+[node name="Destructible" parent="Sprite2D" instance=ExtResource("2_q022b")]
