@@ -2,7 +2,11 @@
 
 ## Demo
 
-\<gifs\>
+![](https://github.com/p-zach/godot-pixel-destruction/blob/main/github_files/Demo.gif)
+
+#### With Debug: Visible Collision Shapes
+
+![](https://github.com/p-zach/godot-pixel-destruction/blob/main/github_files/Demo_CollisionShapes.gif)
 
 ## Usage
 
