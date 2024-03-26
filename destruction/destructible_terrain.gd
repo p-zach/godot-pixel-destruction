@@ -18,18 +18,24 @@ func _ready():
 	for x in range(num_quadrants):
 		_quadrants.append([])
 		for y in range(num_quadrants):
+			# Calculate quadrant bounds
 			var bounds := Rect2i(x * _quadrant_size.x, y * _quadrant_size.y, _quadrant_size.x, _quadrant_size.y)
+			# Assign the appropriate portion of the reference image to this quadrant
 			var quadrant_texture := ImageTexture.create_from_image(terrain_image.get_region(bounds))
 			
+			# Create a new DestructibleTexture scene and set parameters
 			var new_destructible = destructible_texture.instantiate()
 			new_destructible.set_texture(quadrant_texture)
 			new_destructible.position = bounds.position
 			
+			# Remember the coordinates of this destructible
 			_quadrants[x].append(new_destructible)
+			# Add destructible to scene tree
 			add_child(new_destructible)
 			
 func destroy_shape(brush: Brush):
 	var bounds = brush.get_bounds()
+	# Calculate which quadrants the brush's destruction affects
 	var quadrant_min := Vector2i(
 		(int)(bounds.position.x / _quadrant_size.x),
 		(int)(bounds.position.y / _quadrant_size.y)
@@ -38,6 +44,7 @@ func destroy_shape(brush: Brush):
 		(int)(bounds.end.x / _quadrant_size.x),
 		(int)(bounds.end.y / _quadrant_size.y)
 	)
+	# Apply destruction for all affected quadrants
 	for x in range(quadrant_min.x, quadrant_max.x + 1):
 		for y in range(quadrant_min.y, quadrant_max.y + 1):
 			if x >= 0 && x < num_quadrants && y >= 0 && y < num_quadrants:

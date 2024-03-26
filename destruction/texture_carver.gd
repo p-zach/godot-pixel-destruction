@@ -18,5 +18,5 @@ func set_texture(t: Texture2D, p: Vector2, r: float):
 # Note: in order to draw we need queue_redraw() to be called.
 func _draw():
 	draw_set_transform(pos, rot)
-	# Texture is drawn from the top right corner but pos is the center, so we need to translate
+	# Texture is drawn from the top left corner but pos is the center, so we need to translate
 	draw_texture(texture, Vector2(-texture.get_width() / 2.0, -texture.get_height() / 2.0))

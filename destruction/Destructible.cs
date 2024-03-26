@@ -61,6 +61,10 @@ namespace PixelDestructionDemo.Destruction
 		
 		/// <summary>
 		/// Destroy an area of the sprite's texture and collision.
+		/// The polygon is technically distinct from the texture parameters,
+		/// but both should be retrieved from the same source representing the 
+		/// shape and sprite of the destruction (e.g. a brush data structure
+		/// as in the demo) for ease of use.
 		/// </summary>
 		/// <param name="polygon">The polygon to destroy.</param>
 		/// <param name="texture">The texture shape to erase.</param>
